@@ -3,6 +3,16 @@
   "private": true,
   "version": "0.1.0",
   "main": "bin/run",
+  "ava": {
+    "files": [
+      "**/__test__/**/*.test.js"
+    ],
+    "require": "babel-register",
+    "babel": "inherit"
+  },
+  "pre-commit": [
+    "test"
+  ],
   "dependencies": {
     "babel-plugin-transform-class-properties": "^6.16.0",
     "babel-plugin-transform-decorators-legacy": "^1.3.4",
@@ -24,7 +34,9 @@
     "route-decorators": "^0.2.2"
   },
   "devDependencies": {
+    "ava": "^0.16.0",
     "babel-eslint": "^7.0.0",
+    "pre-commit": "^1.1.3",
     "eslint": "^3.7.1",
     "eslint-config-standard": "^6.2.0",
     "eslint-plugin-promise": "^3.0.0",

@@ -1,0 +1,3 @@
+#!/usr/local/bin/babel-node
+require('babel-register')
+require('../server/app')
